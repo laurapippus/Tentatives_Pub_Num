@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio src="Sons_copie/a.ogg" id="a">a</audio>
+    <audio src="Sons_copie/u.ogg" id="u">u</audio>
+    <div>
+        <input type="button" value="a" style="background-color: red">
+        <input type="button" value="u" style="background-color: red">
+    </div>
+
+    <script>
+        // Ajouter un événement aux inputs (boutons)
+        input.addEventListener('onclick', jouerVoyelle)
+        // Fonction  qui sera executée lorsqu'on clique sur le bouton
+        function jouerVoyelle() {
+            // Stocker la valeur du bouton
+            const voyelle = this.//?
+            // Saisir le bon fichier audio
+            const son = document.getElementById(`${voyelle}`);
+            // Éxecuter la fonction
+            son.play();
+        };
+    </script>
+</body>    
+</html>
