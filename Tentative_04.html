@@ -10,19 +10,18 @@
     <audio src="Sons_copie/a.ogg" id="a">a</audio>
     <audio src="Sons_copie/u.ogg" id="u">u</audio>
     <div>
-        <input type="button" value="a" style="background-color: red">
-        <input type="button" value="u" style="background-color: red">
+        <input type="button" value="a" name="a" onclick="jouerVoyelle()" style="background-color: red">
+        <input type="button" value="u" name="u" onclick="jouerVoyelle()" style="background-color: red">
     </div>
 
     <script>
-        // Ajouter un événement aux inputs (boutons)
-        input.addEventListener('onclick', jouerVoyelle)
+
         // Fonction  qui sera executée lorsqu'on clique sur le bouton
         function jouerVoyelle() {
-            // Stocker la valeur de chaque bouton
-            const voyelle = String(this.value); 
+            // Stocker la valeur de chaque bouton. 
+            let voyelle = String(this.name); 
             // Saisir le bon fichier audio
-            const son = document.getElementById(`"${voyelle}"`);
+            let son = document.getElementById(`"${voyelle}"`);
             // Éxecuter la fonction
             son.play();
         };

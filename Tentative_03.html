@@ -21,10 +21,10 @@
         input.addEventListener('onclick', jouerVoyelle)
         // Fonction  qui sera executée lorsqu'on clique sur le bouton
         function jouerVoyelle() {
-            // Stocker la valeur du bouton. this. ???
-            const voyelle = this.
+            // Stocker la valeur du bouton. 
+            const voyelle = this.value;
             // Saisir le bon fichier audio
-            const son = document.getElementById(`${voyelle}`);
+            const son = document.getElementById(`"${voyelle}"`);
             // Éxecuter la fonction
             son.play();
         };
