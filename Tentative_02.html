@@ -15,10 +15,13 @@
     </div>
 
     <script>
+        // Tentative basée sur le data-* attibute 
+
         // Ajouter un événement aux inputs (boutons)
         input.addEventListener('onclick', function(e) {
             // Définir la fonction
-            const son = document.querySelector(`audio[data-son"${e}"]`); // Dans la vidéo il met e.keyCode. Je ne comprends pas. 
+            const son = document.querySelector(`audio[data-son"${e}"]`); 
+            // Dans la vidéo il met e.keyCode. Je ne comprends pas. 
             son.play();
         });
     </script>

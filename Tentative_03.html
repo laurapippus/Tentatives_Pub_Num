@@ -15,12 +15,14 @@
     </div>
 
     <script>
+        // Tentative qui peut être finalement la plus simples si je trouve une solution pour stocker la voyelle du bouton.
+        
         // Ajouter un événement aux inputs (boutons)
         input.addEventListener('onclick', jouerVoyelle)
         // Fonction  qui sera executée lorsqu'on clique sur le bouton
         function jouerVoyelle() {
-            // Stocker la valeur du bouton
-            const voyelle = this.//?
+            // Stocker la valeur du bouton. this. ???
+            const voyelle = this.
             // Saisir le bon fichier audio
             const son = document.getElementById(`${voyelle}`);
             // Éxecuter la fonction
