@@ -10,8 +10,8 @@
     <audio src="Sons_copie/a.ogg" id="a">a</audio>
     <audio src="Sons_copie/u.ogg" id="u">u</audio>
     <div>
-        <input type="button" value="a" onclick="jouerVoyelleA()" style="background-color: red">
-        <input type="button" value="u" onclick="jouerVoyelleU()" style="background-color: red">
+        <input type="button" value="a" onclick="jouerVoyelleA()" onmouseover="this.style.backgroundColor='green'" style="background-color: red">
+        <input type="button" value="u" onclick="jouerVoyelleU()" onmouseover="changerCouleur(this)" onmouseout="couleurNormale(this)" style="background-color: red">
     </div>
 
     <script>
@@ -24,6 +24,14 @@
         function jouerVoyelleU() {
             let voyelle = document.getElementById("u");
             voyelle.play()
+        }
+        // Fonction pour changer la couleur du bouton lorsque la souris est dessus. 
+        function changerCouleur(x) {
+            x.style.backgroundColor = "green";
+        }
+        // Fonction pour revenir à la couleur normale lorsque la souris n'est plus dessus. 
+        function couleurNormale(x) {
+            x.style.backgroundColor = "red";
         }
     </script>
 </body>    
