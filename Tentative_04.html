@@ -19,9 +19,12 @@
         // Fonction  qui sera executée lorsqu'on clique sur le bouton
         function jouerVoyelle() {
             // Stocker la valeur de chaque bouton. 
-            let voyelle = String(this.name); 
+            //let voyelle = String(this.name); 
+            let voyelle = this.value
+            console.log(voyelle)
             // Saisir le bon fichier audio
-            let son = document.getElementById(`"${voyelle}"`);
+            let son = document.getElementById(`${voyelle}`);
+            console.log(document.getElementById(`${voyelle}`))
             // Éxecuter la fonction
             son.play();
         };

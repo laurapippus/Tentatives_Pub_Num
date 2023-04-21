@@ -10,24 +10,38 @@
     <audio src="Sons_copie/a.ogg" id="a">a</audio>
     <audio src="Sons_copie/u.ogg" id="u">u</audio>
     <div>
-        <input type="button" value="a" style="background-color: red">
-        <input type="button" value="u" style="background-color: red">
+        <input type="button" value="a" class="btn" style="background-color: red">
+        <input type="button" value="u" class="btn" style="background-color: red">
+        <button value="a">a</button>
     </div>
 
     <script>
         // Tentative qui peut être finalement la plus simples si je trouve une solution pour stocker la voyelle du bouton.
         
+        const btns = document.querySelectorAll('input[type="button"]')
+        //const btns = document.querySelectorAll("button")
+        console.log(btns)
         // Ajouter un événement aux inputs (boutons)
-        input.addEventListener('onclick', jouerVoyelle)
+        // btns.forEach((btn) => {
+        //     console.log("btn")
+        //     btn.addEventListener('onclick', jouerVoyelle)
+        // })
+
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener('click', jouerVoyelle)
+            console.log(btns[i])
+        }
+        //button.addEventListener('onclick', jouerVoyelle)
         // Fonction  qui sera executée lorsqu'on clique sur le bouton
         function jouerVoyelle() {
             // Stocker la valeur du bouton. Je sais que 'value' est normalement l'input mis par l'utilisateur.
             const voyelle = this.value;
             // Saisir le bon fichier audio
-            const son = document.getElementById(`"${voyelle}"`);
+            const son = document.getElementById(`${voyelle}`);
+            console.log("son")
             // Éxecuter la fonction
             son.play();
-        };
+        }
     </script>
 </body>    
 </html>
