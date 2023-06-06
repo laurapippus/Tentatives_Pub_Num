@@ -22,15 +22,14 @@
         //const btns = document.querySelectorAll("button")
         console.log(btns)
         // Ajouter un événement aux inputs (boutons)
-        // btns.forEach((btn) => {
+        btns.forEach((btn) => {
         //     console.log("btn")
-        //     btn.addEventListener('click', jouerVoyelle)
-        // })
+             btn.addEventListener('click', jouerVoyelle)
+         })
 
-        for (let i = 0; i < btns.length; i++) {
-            btns[i].addEventListener('click', jouerVoyelle)
-            console.log(btns[i])
-        }
+        //for (let i = 0; i < btns.length; i++) {
+          //  btns[i].addEventListener('click', jouerVoyelle)
+        //}
         //button.addEventListener('onclick', jouerVoyelle)
         // Fonction  qui sera executée lorsqu'on clique sur le bouton
         function jouerVoyelle() {
